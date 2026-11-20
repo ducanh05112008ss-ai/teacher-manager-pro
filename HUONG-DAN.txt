@@ -1,0 +1,22 @@
+ĐIỂM DANH V4 – BẢN TƯƠNG THÍCH iPHONE (PWA)
+
+NỘI DUNG
+- Giữ nguyên mã giao diện và logic nghiệp vụ V4 từ mã nguồn Android được cung cấp.
+- Bổ sung manifest, biểu tượng iPhone, chế độ standalone và cache ngoại tuyến.
+- Chuyển chức năng nhập bản sao lưu sang bộ chọn tệp của Safari/iOS.
+- Xuất bản sao lưu JSON bằng cơ chế tải tệp của trình duyệt.
+
+LƯU Ý QUAN TRỌNG
+Đây là gói website PWA, KHÔNG phải file IPA. iPhone không cho cài ứng dụng iOS bằng cách chạm vào một file ZIP/IPA thông thường.
+Để cài dưới dạng biểu tượng ứng dụng, các tệp này cần được đưa lên một địa chỉ HTTPS. Sau đó mở địa chỉ đó bằng Safari trên iPhone:
+1. Chạm nút Chia sẻ.
+2. Chọn “Thêm vào Màn hình chính” (Add to Home Screen).
+3. Bật “Mở dưới dạng ứng dụng web” nếu iOS hiển thị tùy chọn, rồi chạm Thêm.
+
+DỮ LIỆU
+Dữ liệu lưu trong bộ nhớ trình duyệt trên thiết bị. Không xóa dữ liệu Safari/website hoặc gỡ biểu tượng trước khi xuất bản sao lưu JSON.
+Khi chuyển từ Android sang iPhone, hãy xuất file sao lưu JSON từ Android, chuyển file sang iPhone, mở Điểm danh V4 trên iPhone > Cài đặt > Nhập dữ liệu để khôi phục.
+Bản PWA không tự lấy được dữ liệu riêng nằm trong bộ nhớ ứng dụng Android.
+
+KIỂM TRA
+Gói này đã được tạo từ app.js/style.css/index.html trong mã nguồn V4. Bộ test smoke.cjs có lỗi assertion sẵn có ở bản gốc (kết quả 0 thay vì 250000 tại test dòng 29), nên không thể xác nhận toàn bộ kiểm thử nghiệp vụ bằng bộ test gốc.
